@@ -1,0 +1,19 @@
+<?php
+/**
+ * 
+ */
+class Usuario
+{
+	
+	public function login($login,$senha)
+	{
+		global $pdo;
+
+		$sql = "SELECT * FROM tb_usuario WHERE ds_login = :login AND ds_senha = :senha";
+		$sql = $pdo->prepare($sql);
+		$sql->bindValue("login, $login");
+		$sql->bindValue("login, $login");
+		$sql->execute();
+	}
+}
+?>
